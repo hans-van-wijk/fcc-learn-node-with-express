@@ -8,6 +8,7 @@ app.get("/", (req, res) => {
   res.sendFile(IndexView);
 });
 
-app.use(express.static(publicFolder));
+// app.use("public", express.static(publicFolder));
+app.use("/public", express.static(publicFolder));
 
 module.exports = app;
